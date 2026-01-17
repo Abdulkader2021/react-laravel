@@ -1,0 +1,369 @@
+$primary-color: #fe538d;
+$secondary-color: #FFB703;
+$text-color: #000;
+$text-white: #fff;
+$dark-bg: #121212;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+$font-stack: 'Rubik', sans-serif;
+
+body {
+  font-family: $font-stack;
+}
+
+h1{
+    font-size: 4.5em;
+}
+
+h2{
+    font-size: 3em;
+}
+
+h3{
+    font-size: 2em;
+}
+
+p{
+    font-size: 1em;
+}
+
+
+a{
+    color: $text-white;
+    text-decoration: none;
+    &:hover{
+        color: $primary-color;
+        text-decoration: none;
+    }
+}
+
+header{
+    nav{
+        .nav-link{
+            font-size: 1em;
+            color: $text-color;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-left: 20px;  
+        }
+
+        .logo{
+            font-size: 1.5em;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            span{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $dark-bg;
+    color: $text-white;
+    padding: 40px 0;
+
+    h3{
+        color: $secondary-color;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+.btn-primary{
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    padding: 15px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+    }
+}
+
+.btn-secondary{
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+    padding: 15px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+}
+
+
+.section-1{
+    .hero{
+        background: linear-gradient(to right,#000c,#0000),url('../images/hero.jpg');
+        min-height: 800px;
+        color: $text-white;
+
+        span{
+            color: $secondary-color;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+    }
+}
+
+.section-2{
+    img{
+        border-radius: 40px;
+    }
+
+    span{
+        color: $primary-color;
+        font-size: 1.2em;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+    }
+}
+
+
+// .section-3 {
+//     .section-header {
+//         span {
+//             color: $primary-color;
+//             font-size: 1.1em;
+//             font-weight: 600;
+//             text-transform: uppercase;
+//         }
+//         h2 {
+//             font-weight: 700;
+//             margin-top: 10px;
+//         }
+//         p {
+//             color: lighten($text-color, 30%);
+//         }
+//     }
+
+//     .service-card {
+//         height: 500px;
+//         border: none;
+//         border-radius: 40px;
+//         overflow: hidden;
+//         background-size: cover;
+//         background-position: center;
+//         display: flex;
+//         align-items: flex-end; // Push content to bottom
+//         position: relative;
+//         transition: all 0.4s ease;
+
+//         // Dark overlay for text readability
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             top: 0; left: 0; right: 0; bottom: 0;
+//             background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+//             z-index: 1;
+//         }
+
+//         .card-body {
+//             position: relative;
+//             z-index: 2;
+//             padding: 30px;
+//             color: $text-white;
+
+//             h4 {
+//                 font-size: 1.5em;
+//                 font-weight: 600;
+//                 margin-bottom: 10px;
+//             }
+
+//             p {
+//                 font-size: 0.9em;
+//                 margin-bottom: 20px;
+//                 opacity: 0.9;
+//             }
+//         }
+
+//         // Background Images (Replace with your actual asset paths)
+//         &.item-1 { background-image: url('../../assets/images/construction1.jpg'); }
+//         &.item-2 { background-image: url('../../assets/images/construction2.jpg'); }
+//         &.item-3 { background-image: url('../../assets/images/construction3.jpg'); }
+
+//         // Effect when active or hovered
+//         &:hover, &.active {
+//             transform: scale(1.02);
+//             &::before {
+//                 background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+//             }
+//         }
+//     }
+// }
+
+.section-3 {
+    padding: 80px 0;
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+
+        span {
+            color: $primary-color; // #fe538d
+            font-size: 1.1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-weight: 700;
+            margin-top: 10px;
+            color: $text-color;
+        }
+
+        p {
+            color: lighten($text-color, 40%);
+            max-width: 700px;
+            margin: 15px auto 0;
+        }
+    }
+
+    .service-card {
+        position: relative;
+        height: 500px;
+        border: none;
+        border-radius: 40px; // Matching your about-us image radius
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        transition: all 0.4s ease-in-out;
+        margin-bottom: 30px;
+
+        // The dark gradient overlay seen in the screenshot
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+            z-index: 1;
+        }
+
+        .card-body {
+            position: relative;
+            z-index: 2;
+            padding: 40px 30px;
+            color: $text-white;
+
+            h4 {
+                font-size: 1.6rem;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 25px;
+                opacity: 0.9;
+                // Only shows when card is "active" or hovered
+                display: none; 
+            }
+        }
+
+        // Active state (middle card in your screenshot)
+        &.active, &:hover {
+            .card-body p {
+                display: block;
+                animation: fadeInUp 0.5s ease;
+            }
+        }
+    }
+}
+
+// Simple animation for the text appearing
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.section-4 {
+    background-color: #f8f9fa; // Light background to separate from Section 2
+
+    .section-header {
+        span {
+            color: $primary-color;
+            font-size: 1.2em;
+            font-weight: 500;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+    }
+
+    .card {
+        border-radius: 20px;
+        transition: all 0.3s ease-in-out;
+        border: none;
+        
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            
+            .service-icon {
+                background-color: $secondary-color;
+                color: $text-white;
+            }
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background-color: lighten($primary-color, 30%);
+            color: $primary-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
+            font-size: 2rem;
+        }
+
+        h4 {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: $text-color;
+        }
+
+        p {
+            color: lighten($text-color, 40%);
+            line-height: 1.6;
+        }
+    }
+}
+
+.login-form{
+    .card{
+        width: 450px;
+    }
+}
+
+
+.dashboard{
+    .card{
+        min-height: 400px;
+    }
+}
