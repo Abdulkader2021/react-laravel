@@ -31,13 +31,14 @@ p{
 
 
 a{
-    color: $text-white;
+    color: $dark-bg;
     text-decoration: none;
     &:hover{
         color: $primary-color;
         text-decoration: none;
     }
 }
+
 
 header{
     nav{
@@ -133,77 +134,6 @@ footer{
 }
 
 
-// .section-3 {
-//     .section-header {
-//         span {
-//             color: $primary-color;
-//             font-size: 1.1em;
-//             font-weight: 600;
-//             text-transform: uppercase;
-//         }
-//         h2 {
-//             font-weight: 700;
-//             margin-top: 10px;
-//         }
-//         p {
-//             color: lighten($text-color, 30%);
-//         }
-//     }
-
-//     .service-card {
-//         height: 500px;
-//         border: none;
-//         border-radius: 40px;
-//         overflow: hidden;
-//         background-size: cover;
-//         background-position: center;
-//         display: flex;
-//         align-items: flex-end; // Push content to bottom
-//         position: relative;
-//         transition: all 0.4s ease;
-
-//         // Dark overlay for text readability
-//         &::before {
-//             content: '';
-//             position: absolute;
-//             top: 0; left: 0; right: 0; bottom: 0;
-//             background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
-//             z-index: 1;
-//         }
-
-//         .card-body {
-//             position: relative;
-//             z-index: 2;
-//             padding: 30px;
-//             color: $text-white;
-
-//             h4 {
-//                 font-size: 1.5em;
-//                 font-weight: 600;
-//                 margin-bottom: 10px;
-//             }
-
-//             p {
-//                 font-size: 0.9em;
-//                 margin-bottom: 20px;
-//                 opacity: 0.9;
-//             }
-//         }
-
-//         // Background Images (Replace with your actual asset paths)
-//         &.item-1 { background-image: url('../../assets/images/construction1.jpg'); }
-//         &.item-2 { background-image: url('../../assets/images/construction2.jpg'); }
-//         &.item-3 { background-image: url('../../assets/images/construction3.jpg'); }
-
-//         // Effect when active or hovered
-//         &:hover, &.active {
-//             transform: scale(1.02);
-//             &::before {
-//                 background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
-//             }
-//         }
-//     }
-// }
 
 .section-3 {
     padding: 80px 0;
@@ -365,5 +295,25 @@ footer{
 .dashboard{
     .card{
         min-height: 400px;
+    }
+}
+
+
+.sidebar{
+    ul {
+
+        display: inline;
+
+        li {
+            
+
+            list-style: none;
+
+
+            a{
+                display: inline-block;
+                padding: 10px 0;
+            }
+        }
     }
 }
