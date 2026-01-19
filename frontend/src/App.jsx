@@ -11,6 +11,9 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './components/backend/Dashboard';
 import RequireAuth from './components/common/RequireAuth';
+import {default as ShowServices} from './components/backend/services/Show';
+import {default as CreateServices} from './components/backend/services/Create';
+import {default as EditServices} from './components/backend/services/Edit';
 
 
 
@@ -33,7 +36,25 @@ function App() {
             </RequireAuth>
             
           />
-
+         
+          <Route path='/admin/services' element=
+            <RequireAuth>
+                  {<ShowServices />} 
+            </RequireAuth>
+            
+          />
+         
+          <Route path='/admin/services/create' element=
+            <RequireAuth>
+                  {<CreateServices />} 
+            </RequireAuth>
+          />
+          
+          <Route path='/admin/services/edit/:id' element=
+            <RequireAuth>
+                  {<EditServices />} 
+            </RequireAuth>
+          />
 
         </Routes>
       </BrowserRouter>

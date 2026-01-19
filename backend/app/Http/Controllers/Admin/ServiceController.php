@@ -86,7 +86,7 @@ class ServiceController extends Controller
 
         return response()->json([
             'status' => true,
-            'errors' => 'Service added sccessfully.'
+            'message' => 'Service added sccessfully.'
         ]);
     }
 
@@ -194,7 +194,7 @@ class ServiceController extends Controller
 
         return response()->json([
             'status' => true,
-            'errors' => 'Service updated sccessfully.'
+            'message' => 'Service updated sccessfully.'
         ]);
     }
 
