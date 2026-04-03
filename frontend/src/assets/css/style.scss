@@ -3,6 +3,7 @@ $secondary-color: #FFB703;
 $text-color: #000;
 $text-white: #fff;
 $dark-bg: #121212;
+$light-background: #9e9b9b;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
@@ -22,7 +23,7 @@ h2{
 }
 
 h3{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 p{
@@ -39,6 +40,20 @@ a{
     }
 }
 
+.bg-light{
+    background-color: $light-background;
+}
+
+.section-header{
+    span{
+        color: $primary-color;
+        font-size: 1.2em;
+        padding-bottom: 10px;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}
 
 header{
     nav{
@@ -71,6 +86,18 @@ footer{
         color: $secondary-color;
         font-size: 1.5em;
         margin-bottom: 20px;
+    }
+
+    ul{
+        li{
+            
+        }
+    }
+
+    a{
+        color: $text-white;
+        font-size: 1.2em;  
+        text-decoration: none;
     }
 
 }
@@ -133,89 +160,69 @@ footer{
     }
 }
 
-
-
 .section-3 {
-    padding: 80px 0;
-
-    .section-header {
-        text-align: center;
-        margin-bottom: 50px;
-
-        span {
-            color: $primary-color; // #fe538d
-            font-size: 1.1em;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        h2 {
-            font-weight: 700;
-            margin-top: 10px;
-            color: $text-color;
-        }
-
-        p {
-            color: lighten($text-color, 40%);
-            max-width: 700px;
-            margin: 15px auto 0;
-        }
-    }
-
-    .service-card {
+    .item{
         position: relative;
-        height: 500px;
-        border: none;
-        border-radius: 40px; // Matching your about-us image radius
         overflow: hidden;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: flex-end;
-        transition: all 0.4s ease-in-out;
+        color: $text-white;
         margin-bottom: 30px;
 
-        // The dark gradient overlay seen in the screenshot
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
-            z-index: 1;
+        &:hover{
+            .service-body{
+                transform: translateY(0%);
+                .service-content{
+                    opacity: 1;
+                }
+            }
         }
 
-        .card-body {
+        .service-image{
             position: relative;
-            z-index: 2;
-            padding: 40px 30px;
-            color: $text-white;
+            overflow: hidden;
 
-            h4 {
-                font-size: 1.6rem;
-                font-weight: 600;
-                margin-bottom: 15px;
+            img{
+                width: 100%;
+                border-radius: 40px;
+                aspect-ratio: 1 / 1.2;
+                object-fit: cover;
             }
 
-            p {
-                font-size: 0.95rem;
-                line-height: 1.6;
-                margin-bottom: 25px;
-                opacity: 0.9;
-                // Only shows when card is "active" or hovered
-                display: none; 
+            &:after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                border-radius: 40px;
+                background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, 0) 13.02%, rgba(0, 0, 0, 0.51) 42.5%, rgba(0, 0, 0, 0.63) 70%, #000000 100%);
             }
         }
 
-        // Active state (middle card in your screenshot)
-        &.active, &:hover {
-            .card-body p {
-                display: block;
-                animation: fadeInUp 0.5s ease;
+        .service-body {
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            transform: translateY(80%);
+            transition: all 0.4s ease-in-out;
+
+            .service-content{
+                transition: all 0.4s ease-in-out;
+                opacity: 0;
             }
         }
     }
 }
+
+
+.section-4{
+    .card {
+        border-radius: 40px;
+        margin-bottom: 30px;
+    }    
+}
+
 
 // Simple animation for the text appearing
 @keyframes fadeInUp {
@@ -223,67 +230,6 @@ footer{
     to { opacity: 1; transform: translateY(0); }
 }
 
-
-.section-4 {
-    background-color: #f8f9fa; // Light background to separate from Section 2
-
-    .section-header {
-        span {
-            color: $primary-color;
-            font-size: 1.2em;
-            font-weight: 500;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        h2 {
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-    }
-
-    .card {
-        border-radius: 20px;
-        transition: all 0.3s ease-in-out;
-        border: none;
-        
-        &:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            
-            .service-icon {
-                background-color: $secondary-color;
-                color: $text-white;
-            }
-        }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background-color: lighten($primary-color, 30%);
-            color: $primary-color;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            transition: all 0.3s ease;
-            font-size: 2rem;
-        }
-
-        h4 {
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: $text-color;
-        }
-
-        p {
-            color: lighten($text-color, 40%);
-            line-height: 1.6;
-        }
-    }
-}
 
 .login-form{
     .card{
